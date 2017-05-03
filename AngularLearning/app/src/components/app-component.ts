@@ -1,5 +1,5 @@
 import {Component} from "angular2/core";
-import {CepPipe} from "./cep-pipe";
+import {CepPipe} from "../pipes/cep-pipe";
 
 @Component({
     selector: "meu-app",

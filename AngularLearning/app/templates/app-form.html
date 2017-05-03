@@ -1,0 +1,57 @@
+﻿<div class="jumbotron" style="width:70%;margin:0 auto;padding:20px;">
+    <h2 class="text-center">Teste de Formulário</h2>
+    <hr />
+    <div class="alert alert-success" role="alert" *ngIf="sucesso">
+        Aluno adicionado com sucesso!
+    </div>
+
+    <div class="well">
+        <form (ngSubmit)="enviar()">
+            <div class="form-group">
+                <label class="control-label" for="nome">Nome</label>
+                <input type="text" class="form-control" name="nome" id="nome" [(ngModel)]="aluno.nome" />
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="email">Email</label>
+                <input type="text" class="form-control" name="email" id="email" [(ngModel)]="aluno.email" />
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="idade">Idade</label>
+                <input type="text" class="form-control" name="idade" id="idade" [(ngModel)]="aluno.idade" />
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="curso">Curso</label>
+                <select name="curso" id="curso" class="form-control" [(ngModel)]="aluno.curso">
+                    <option *ngFor="#c of cursos" [value]="c.nome">{{c.nome}}</option>
+                </select>
+            </div>
+            <hr />
+            <div class="form-group text-center">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+    <div>
+        <table class="table table-striped">
+            <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Idade</th>
+                <th>Curso</th>
+                <th>&nbsp;</th>
+            </tr>
+            <tr *ngFor="#aluno of alunos; #id=index">
+                <td>{{aluno.nome}}</td>
+                <td>{{aluno.email}}</td>
+                <td>{{aluno.idade}}</td>
+                <td>{{aluno.curso}}</td>
+                <td>
+                    <button class="btn btn-danger" (click)="excluir(id)">
+                        Remover
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
