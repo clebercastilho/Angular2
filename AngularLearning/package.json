@@ -7,6 +7,7 @@
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "lite": "lite-server",
+    "prestart": "npm install",
     "start": "concurrent \"npm run tsc:w\" \"npm run lite\" "
   },
   "keywords": [],
