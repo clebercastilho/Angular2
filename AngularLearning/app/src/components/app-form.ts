@@ -23,7 +23,7 @@ export class AppForm {
     aluno: Aluno;
 
     constructor(private cursoService: CursoService, private alunoService: AlunoService) {
-        this.cursos = cursoService.listarTodos();
+        this.cursos = cursoService.listar();
         this.alunos = alunoService.listar();
         this.aluno = new Aluno();
     }
