@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AlunosAPI.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -11,7 +12,7 @@ namespace AlunosAPI.Controllers
     {
         public HttpResponseMessage Get()
         {
-            return Request.CreateResponse(HttpStatusCode.OK, new { sucesso = true });
+            return Request.CreateResponse(HttpStatusCode.OK, new { sucesso = true, data = new List<AlunoModel>() });
         }
 
         public HttpResponseMessage Delete(int id)
