@@ -22,12 +22,13 @@
             <div class="form-group">
                 <label class="control-label" for="curso">Curso</label>
                 <select name="curso" id="curso" class="form-control" [(ngModel)]="aluno.curso">
-                    <option *ngFor="#c of cursos" [value]="c.nome">{{c.nome}}</option>
+                    <option *ngFor="let c of cursos" [value]="c.nome">{{c.nome}}</option>
                 </select>
             </div>
             <hr />
             <div class="form-group text-center">
                 <button type="submit" class="btn btn-primary">Enviar</button>
+
             </div>
         </form>
     </div>
@@ -41,7 +42,7 @@
                 <th>Curso</th>
                 <th>&nbsp;</th>
             </tr>
-            <tr *ngFor="#aluno of alunos; #id=index">
+            <tr *ngFor="let aluno of alunos; let id = index">
                 <td>{{aluno.nome}}</td>
                 <td>{{aluno.email}}</td>
                 <td>{{aluno.idade}}</td>

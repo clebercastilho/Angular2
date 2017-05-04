@@ -46,20 +46,28 @@
   <ItemGroup>
     <Content Include="app\templates\app-component.html" />
     <Content Include="app\templates\app-form.html" />
+    <Content Include="app\templates\app-whatever.html" />
     <Content Include="index.html" />
     <Content Include="package.json" />
     <Content Include="tsconfig.json" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="app\src\appRouting.module.ts" />
+    <TypeScriptCompile Include="app\src\app.module.ts" />
     <TypeScriptCompile Include="app\src\components\app-component.ts" />
     <TypeScriptCompile Include="app\src\components\app-form.ts" />
-    <TypeScriptCompile Include="app\src\boot.ts" />
+    <TypeScriptCompile Include="app\src\components\app-whatever.ts" />
     <TypeScriptCompile Include="app\src\pipes\cep-pipe.ts" />
     <TypeScriptCompile Include="app\src\models\aluno.ts" />
     <TypeScriptCompile Include="app\src\models\curso.ts" />
     <TypeScriptCompile Include="app\src\models\validators\email-validation.ts" />
     <TypeScriptCompile Include="app\src\models\validators\simple-validation.ts" />
+    <TypeScriptCompile Include="app\src\services\aluno-service.ts" />
     <TypeScriptCompile Include="app\src\services\curso-service.ts" />
+    <TypeScriptCompile Include="main.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="systemjs.config.js" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
