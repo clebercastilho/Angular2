@@ -51,7 +51,9 @@ Ankh.NoLoad
 !/packages/*/lib/*/*.dll
 
 #js build from Typescript and node_modules
-!/app/build/*
-!/app/**/*.js
-!/app/**/*.js.map
+*/app/build/*
+*/app/**/*.js
+*/app/**/*.js.map
 */node_modules/
+/AngularLearning/main.js
+/AngularLearning/main.js.map
