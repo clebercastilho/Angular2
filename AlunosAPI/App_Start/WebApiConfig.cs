@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace AlunosAPI
 {
@@ -9,7 +10,9 @@ namespace AlunosAPI
     {
         public static void Register(HttpConfiguration config)
         {
-            // Web API configuration and services
+            // Web API CORS
+            var cors = new EnableCorsAttribute("http://localhost:2560", "*", "get,post");
+            config.EnableCors(cors);
 
             // Web API routes
             config.MapHttpAttributeRoutes();
