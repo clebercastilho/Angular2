@@ -8,11 +8,12 @@ import {EmailValidator} from "../models/validators/email-validation";
 
 import {CursoService} from "../services/curso-service";
 import {AlunoService} from "../services/aluno-service";
+import {ConfigService} from "../services/config-service";
 
 @Component({
     selector: "meu-form",
     templateUrl: "app/templates/app-form.html",
-    providers: [CursoService, AlunoService]
+    providers: [CursoService, AlunoService, ConfigService]
 })
 
 export class AppForm {
@@ -23,7 +24,8 @@ export class AppForm {
     aluno: Aluno;
 
     constructor(private cursoService: CursoService, private alunoService: AlunoService) {
-        this.cursos = cursoService.listar();
+        cursoService.listar().then(d => this.cursos = cursoService.parsing(d.data));
+
         this.alunos = alunoService.listar();
         this.aluno = new Aluno();
     }
