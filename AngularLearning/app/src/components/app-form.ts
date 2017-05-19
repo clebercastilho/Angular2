@@ -1,11 +1,8 @@
 ﻿import {Component} from "@angular/core";
-
 import {Curso} from "../models/curso";
 import {Aluno} from "../models/aluno";
-
 import {SimpleRequiredValidator} from "../models/validators/simple-validation";
 import {EmailValidator} from "../models/validators/email-validation";
-
 import {CursoService} from "../services/curso-service";
 import {AlunoService} from "../services/aluno-service";
 import {ConfigService} from "../services/config-service";

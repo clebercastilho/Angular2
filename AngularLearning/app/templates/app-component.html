@@ -1,8 +1,21 @@
-<h1>{{titulo}}</h1>
-
-<nav>
-    <a routerLink="/whatever">Main</a>
-    <a routerLink="/aluno">Manage alunos</a>
-</nav>
-
-<router-outlet></router-outlet>
+<div class="container-fluid">
+    <div class="jumbotron">
+        <h1>{{titulo}}</h1>
+        <p>{{subtitulo}}</p>
+    </div>
+    <nav class="navbar navbar-inverse">
+        <ul class="nav navbar-nav">
+            <li class="active">
+                <a routerLink="/whatever">Main</a>
+            </li>
+            <li>
+                <a routerLink="/aluno">Manage alunos</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="row">
+        <div class="col-md-12">
+            <router-outlet></router-outlet>
+        </div>
+    </div> 
+</div>

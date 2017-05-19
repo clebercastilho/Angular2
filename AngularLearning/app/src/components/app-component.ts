@@ -8,8 +8,10 @@ import {Component} from "@angular/core";
 export class AppComponent {
 
     titulo: string;
+    subtitulo: string;
 
     constructor() {
-        this.titulo = "Base page - Whatever";
+        this.titulo = "Angular 2";
+        this.subtitulo = "Simples sistema para estudo de funcionalidades do angular 2.";
     }
 }
